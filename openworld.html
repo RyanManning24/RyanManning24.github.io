@@ -1,0 +1,56 @@
+<!doctype html>
+<! --- Open World Project --->
+<html>
+	<head>
+			<title>My Webpage</title>
+			<link href="styles/main.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<h1>Open World Project</h1>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="dissertation.html">Dissertation Project</a></li>
+				<li>Open World Project</li>
+				<li><a href="aicontroller.html">Squad AI Controller Project</a></li>
+				<li><a href="directx.html">DirectX Project</a></li>
+				<li><a href="inconfidence.html">In Confidence</a></li>
+				<li><a href="cgdgame2.html">The Good, The Bad, The Penguin</a></li>
+				<li><a href="cgdgame1.html">War Of God</a></li>
+				<li><a href="mobileapps.html">Mobile Application Project</a></li>
+				<li><a href="virus.html">V.I.R.U.S Board Game</a></li>
+
+			</ul>
+		</nav>
+		<div>
+			<img src="images/openworld.PNG" alt="Open World Project">
+		</div>
+		
+		<h3>Breif Overview of Development</h3>
+		<p>I created an infinitely generating world with NPC’s, which randomly move around the world, and a randomly spawning house. Here you can see a video of this working.</p>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/JNUFsyrq7l4">frameborder="0" allowfullscreen></iframe>
+		</iframe>
+		<p>The infinitely generating world is created using chunks. To start this, I first implemented a file reading system that would be able to read text files and use that information to be able to generate objects in the game world. </p>
+		<p>Once this was achieved my job was to chunk up the world so that I can make sure that only the area around the player is loaded in. The main problem with this was that occurred was unloading chunks and making sure that as the player moved away the floor would unload. As this left unchecked would just cause the game to continually get harder to run as the player would load more chunks in. To fix this issue and try to optimise for the future I decided to implement a system where instead of unloading the floor and loading the floor back in each time to just move unused floor around the player. This then saves on loading costs in the game and creates the illusion that the game is unloading everything like normal.</p>
+		<p>This report can be found and download<a href="docs/openworld.pdf" download rel="noopener noreferrer" target="_blank">
+   here.
+		</a></p>
+		<p>The NPCs in this game uses a waypoint system that allows the NPC’s to randomly move around the loaded in area. One problem that could occur with this is that if the NPC runs into a wall trying to get to their waypoint, they will be infinitely stuck. To overcome this issue, I created a fail safe so that if the NPC registers that it’s been in the same spot for a couple of seconds then the waypoint that they were moving to is scrapped and a new one is generated.</p>
+		<p>For more information on this project i created a report<a href="docs/openworld.pdf" download rel="noopener noreferrer" target="_blank">
+   here.
+		</a>Which contains more detailed information and also screen shots of code.</p>
+		<p>As well as this the project files can be found here <a href="https://github.com/RyanManning24/ATTask3">here.</a></p>
+
+
+		<h4>Links To My Socials And Ways To Contact</h4>
+		<p>Email: ryanmanning@sky.com </p>
+
+
+	</body>
+
+	<footer>
+	<p>© 2021 Ryan Manning</p>
+	</footer>
+
+</html>
